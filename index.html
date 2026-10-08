@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0B2D57">
+<meta name="description" content="Altis Games — Mimicou, Na Ordem e TierParty. Escolha seu jogo e divirta-se.">
+<title>Altis Games | Bora jogar!</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"><script src="supabase-config.js" defer></script><script src="script.js" defer></script>
+</head>
+<body>
+<header class="header" id="inicio"><div class="header-inner">
+<a class="logo" href="#inicio" aria-label="Altis Games — início"><img src="assets/altis-logo-sticker.png" alt="Altis Games"></a>
+<nav aria-label="Menu principal"><a href="#inicio" class="nav-link current">Início</a><a href="#jogos" class="nav-link">Nossos jogos</a></nav>
+<a class="nav-cta" href="#jogos">Bora jogar <span aria-hidden="true">↗</span></a>
+</div></header>
+<main>
+<section class="hero-banner" aria-label="Altis Games — Jogos que reúnem pessoas">
+  <img src="assets/banner-altis-principal.png" alt="Altis Games — Jogos que reúnem pessoas" width="1983" height="793" fetchpriority="high">
+  <a class="hero-banner-cta" href="#jogos">Bora Jogar <span aria-hidden="true">→</span></a>
+</section>
+<section class="games-section" id="jogos"><div class="section-inner"><div class="section-title"><div><h2>Nossos <span class="paper-yellow">jogos</span></h2></div><span class="count" id="game-count" aria-live="polite">CARREGANDO...</span></div><div class="category-filters" id="category-filters" role="group" aria-label="Filtrar jogos por categoria" hidden></div><div class="games-grid" id="game-grid" aria-live="polite"></div><p class="catalog-message" id="catalog-message" role="status" hidden></p></div></section>
+</main>
+<footer class="footer"><div class="footer-inner"><img src="assets/altis-logo.png" alt="Altis Games"><span>© <span id="year"></span> Altis Games</span><a href="#inicio">Voltar ao topo ↑</a></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>
