@@ -54,7 +54,7 @@ function safeImagePath(path){
   const value = path.trim();
   // Imagens locais em assets/ (não aceita caminhos ascendentes, scripts ou URLs externas).
   if(/^assets\/[a-zA-Z0-9_./-]+\.(png|jpg|jpeg|webp|gif|avif)$/i.test(value) && !value.includes('..')) return value;
-  try {const u=new URL(value);const base=new URL(window.ALTIS_SUPABASE.url);if(u.protocol==='https:' && u.origin===base.origin && u.pathname.startsWith('/storage/v1/object/public/game-images/') && !u.pathname.includes('..'))return u.href;}catch{}
+  try {const u=new URL(value);const base=new URL(window.ALTIS_SUPABASE.url);if(u.protocol==='https:' && !u.pathname.includes('..') && ((u.origin===base.origin && u.pathname.startsWith('/storage/v1/object/public/game-images/')) || (u.origin==='https://audio.altigames.com.br' && /^\/portfolio\/games\/[a-zA-Z0-9_.-]+\.(png|jpg|jpeg|webp|gif|avif)$/i.test(u.pathname))))return u.href;}catch{}
   return null;
 }
 function safeGameUrl(url){
